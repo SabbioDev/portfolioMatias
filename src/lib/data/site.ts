@@ -1,0 +1,44 @@
+export const site = {
+  name: "Matías Sabbionari",
+  firstName: "Matías",
+  lastName: "Sabbionari",
+  initials: "MS",
+  role: "Full Stack Developer",
+  email: "sabbio.dev@gmail.com",
+  location: "Argentina",
+  availability: "Disponible para nuevas oportunidades",
+  url: "https://sabbio.dev",
+  description:
+    "Full Stack Developer enfocado en React, Next.js y TypeScript. Construyo productos web reales, accesibles y de alto rendimiento. Actualmente aprendiendo Node.js y ampliando mi camino al backend.",
+  github: "https://github.com/SabbioDev",
+  linkedin:
+    "https://www.linkedin.com/in/matias-nicolas-sabbionari-b6ba32227/",
+  technologies: [
+    "HTML",
+    "CSS",
+    "Sass",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Node.js",
+    "MongoDB",
+    "Git",
+    "GitHub",
+    "Vercel",
+    "Hostinger",
+    "Prompt Engineering",
+    "Agentes IA",
+  ],
+} as const;
+
+export const navLinks = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#sobre-mi", label: "Sobre mí" },
+  { href: "#skills", label: "Skills" },
+  { href: "#proyectos", label: "Proyectos" },
+  { href: "#experiencia", label: "Experiencia" },
+  { href: "#educacion", label: "Educación" },
+  { href: "#contacto", label: "Contacto" },
+] as const;
