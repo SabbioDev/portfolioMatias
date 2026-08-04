@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Matías Sabbionari
 
-## Getting Started
+Portfolio profesional de **Full Stack Developer** construido con Next.js 16, TypeScript, App Router, Tailwind CSS v4, shadcn/ui, Framer Motion, React Hook Form y Zod.
 
-First, run the development server:
+## Stack
+
+| Área | Tecnología |
+| --- | --- |
+| Framework | Next.js 16 (App Router, Turbopack) |
+| Lenguaje | TypeScript |
+| Estilos | Tailwind CSS v4 + shadcn/ui |
+| Animaciones | Framer Motion |
+| Iconos | Lucide + iconos de marca propios |
+| Temas | next-themes (dark / light / system) |
+
+## Empezar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrí [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Personalización
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Toda la información editable está centralizada en `src/lib/data/`:
 
-## Learn More
+- `site.ts` — nombre, email, GitHub, LinkedIn, URL del sitio y tecnologías del hero.
+- `projects.ts` — los 2 proyectos (descripción, problema, solución, arquitectura, desafíos, lecciones, links).
+- `skills.ts` — tecnologías agrupadas por categoría.
+- `experience.ts` — experiencia demostrable.
+- `education.ts` — educación y certificaciones.
 
-To learn more about Next.js, take a look at the following resources:
+### Pendientes antes de publicar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Repositorios**: en `projects.ts` hay URLs placeholder de GitHub (`https://github.com/SabbioDev/<proyecto>`). Reemplazalas por las reales.
+2. **URL del sitio**: en `site.ts`, cambiá `url` por tu dominio real (afecta canonical, OG, sitemap y robots).
+3. **Avatar y capturas**: el hero usa un avatar SVG con tus iniciales. Si querés foto real, reemplazá el contenido de `HeroVisual`. Para capturas reales de proyectos, agregalas en `public/` y usá `next/image` en `ProjectPreview`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Comandos
 
-## Deploy on Vercel
+```bash
+npm run dev       # desarrollo
+npm run build     # build de producción
+npm run start     # servidor de producción
+npm run lint      # eslint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Recomendado: **Vercel**.
+
+```bash
+npm i -g vercel
+vercel
+```
+
+## SEO incluido
+
+- Metadata completa (title template, description, OG, Twitter Card, canonical).
+- `robots.ts`, `sitemap.ts`, `manifest.ts`.
+- `opengraph-image.tsx` generada con `next/og`.
+- Favicon SVG en `app/icon.svg`.
+- Datos estructurados JSON-LD (Person + WebSite).
+
+## Accesibilidad y performance
+
+- Skip link, focus rings, aria-labels, contraste AA, `prefers-reduced-motion`.
+- Animaciones solo con `whileInView` + `MotionConfig reducedMotion="user"`.
+- Fonts auto-optimizadas con `next/font`, imágenes SVG ligeras, sin dependencias pesadas.
