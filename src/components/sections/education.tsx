@@ -39,6 +39,21 @@ export function Education() {
               <p className="relative mt-4 text-sm leading-relaxed text-muted-foreground">
                 {main.description}
               </p>
+              <div className="relative mt-4 space-y-3">
+                {main.courses.map((course) => (
+                  <div
+                    key={course.title}
+                    className="rounded-xl border bg-muted/30 p-4"
+                  >
+                    <h4 className="font-heading text-sm font-semibold">
+                      {course.title}
+                    </h4>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                      {course.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
               <ul className="relative mt-4 space-y-2">
                 {main.highlights.map((highlight) => (
                   <li

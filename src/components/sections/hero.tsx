@@ -45,7 +45,11 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <Button asChild size="lg" className="rounded-full px-6">
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full bg-gradient-to-r from-brand-1 via-brand-2 to-brand-3 px-6 text-white shadow-lg shadow-brand-1/25 transition-shadow hover:bg-none hover:shadow-xl hover:shadow-brand-1/30"
+            >
               <a href="#proyectos">
                 Ver proyectos
                 <ArrowUpRight aria-hidden data-icon="inline-end" />

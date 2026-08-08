@@ -84,7 +84,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
         }`}
       >
         <div>
-          <div className="overflow-hidden rounded-2xl border bg-card shadow-sm">
+          <div className="group/preview overflow-hidden rounded-2xl border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-foreground/20 hover:shadow-xl hover:shadow-brand-1/10">
             <ProjectPreview project={project} />
           </div>
         </div>

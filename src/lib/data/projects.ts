@@ -5,6 +5,7 @@ export type ProjectDetail = {
 
 export type Project = {
   slug: string;
+  image: string;
   name: string;
   tagline: string;
   description: string;
@@ -25,6 +26,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "finanzas-argentinas",
+    image: "/projects/finanzas-argentinas.jpg",
     name: "Finanzas Argentinas",
     tagline: "Dashboard de datos financieros en tiempo real",
     description:
@@ -64,6 +66,7 @@ export const projects: Project[] = [
   },
   {
     slug: "portfolio-milagros-ayul",
+    image: "/projects/milagros-ayul.jpg",
     name: "Portfolio Milagros Ayul",
     tagline: "Identidad digital para una profesional audiovisual",
     description:
